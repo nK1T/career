@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <img src="image/logo.png" alt="Company Logo" />
+      </div>
+      <div class="links">
+        <a href="mailto:ankit.giri.15042002@gmail.com" class="link">Contact <i class="fa fa-envelope" style="font-size: 23px; margin-left: 10px"></i></a>
+      </div>
+    </div>
+    <div class="form-container">
+      <h2 class="form-title">JOB APPLICATION</h2>
+      <form action="/apply" method="POST" enctype="multipart/form-data" id= "careerForm">
+        <div class="page">
+          <!-- Page 1 Content -->
+          <label for="applyFor" class="field-title">APPLY FOR <span style="color: red">*</span></label>
+          <select id="applyFor" name="applyfor" required class="custom-select">
+            <option value="" disabled selected>-Select-</option>
+            <option value="MARKETING MANAGER">MARKETING MANAGER</option>
+            <option value="DIGITAL MARKETING MANAGER">DIGITAL MARKETING MANAGER</option>
+            <option value="LEAD GENERATION MANAGER">LEAD GENERATION MANAGER</option>
+          </select>
+          <button class="btn">Next</button>
+        </div>
+
+        <div class="page">
+          <!-- Page 2 Content -->
+          <label for="fullname" class="field-title">FULL NAME <span style="color: red">*</span></label>
+          <input type="text" id="fullname" name="fullname" required />
+          <label for="dob" class="field-title">DOB <span style="color: red">*</span></label>
+          <input type="date" id="dob" name="dob" required />
+          <label for="gender" class="field-title">GENDER <span style="color: red">*</span></label>
+          <select id="gender" name="gender" required class="custom-select">
+            <option value="" disabled selected>-Select-</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="PreferNotToSay">Prefer Not to Say</option>
+          </select>
+          <div class="buttons">
+            <button class="back-btn">Back</button>
+            <button class="btn">Next</button>
+          </div>
+        </div>
+        <div class="page">
+          <!-- Page 3 Content -->
+          <label for="contactNo" class="field-title">CONTACT NO <span style="color: red">*</span></label>
+          <input type="text" id="contactNo" name="contact" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required />
+
+          <label for="email" class="field-title">EMAIL <span style="color: red">*</span></label>
+          <input type="email" id="email" name="email" required oninput="validateEmail(this);"/>
+
+          <label for="city" class="field-title">CITY <span style="color: red">*</span></label>
+          <input type="text" id="city" name="city" required />
+
+          <label for="country" class="field-title">COUNTRY <span style="color: red">*</span></label>
+          <select id="country" name="country" required class="custom-select">
+            <option value="" disabled selected>-Select-</option>
+            <option value="India">INDIA</option>
+          </select>
+          <label for="linkedin" class="field-title">LINKEDIN PROFILE LINK<span style="color: red">*</span></label>
+          <input type="text" id="linkedin" name="linkedin" required/>
+          <div class="buttons">
+            <button class="back-btn">Back</button>
+            <button class="btn">Next</button>
+          </div>
+        </div>
+        <div class="page">
+          <!-- Page 4 Content -->
+          <label for="education" class="field-title">HIGHEST QUALIFICATION <span style="color: red">*</span></label>
+          <select id="education" name="education" required class="custom-select">
+            <option value="" disabled selected>-Select-</option>
+            <option value="Masters">MASTER'S DEGREE</option>
+            <option value="Bachelors">BACHELOR'S DEGREE</option>
+            <option value="Diploma">DIPLOMA DEGREE</option>
+            <option value="12th">12TH</option>
+          </select>
+          <label for="exp" class="field-title">WORK EXPERIENCE <span style="color: red">*</span></label>
+          <input type="text" id="experience" name="experience" required />
+          <!-- <label for="city" class="field-title">CITY <span style="color: red">*</span></label>
+          <input type="text" id="city" name="city" required />
+          <label for="country" class="field-title">COUNTRY <span style="color: red">*</span></label>
+          <select id="country" name="country" required class="custom-select">
+            <option value="" disabled selected>-Select-</option>
+            <option value="India">INDIA</option>
+          </select> -->
+          <div class="buttons">
+            <button class="back-btn">Back</button>
+            <button class="btn">Next</button>
+          </div>
+        </div>
+        <div class="page">
+          <!-- Page 5 Content -->
+          <label for="skills" class="field-title">SKILLS <span style="color: red">*</span></label>
+          <input type="text" id="skills" name="skills" required />
+          <label for="portfolio" class="field-title">PORTFOLIO/PREVIOUS PROJECTS LINK</label>
+          <input type="text" id="portfolio" name="portfolio" />
+          <label for="resume" class="field-title">UPLOAD RESUME<span style="color: red">*</span></label>
+          <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" />
+          <div class="buttons">
+            <button class="back-btn">Back</button>
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
